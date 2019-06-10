@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ae9564837d","applicationID":"67979222","transactionName":"eg4PQUIJCF1cQxZNBV4STkZYCRQ=","queueTime":1,"applicationTime":595,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <script type="text/javascript">
+        userId = "rWkbuw0IH76zO4xozEgWZA";
+
+      dataLayer = [{
+        'UserID': userId,
+      }];
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WDGXQ3');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- KISSMETRICS -->
+  <script type="text/javascript">var _kmq = _kmq || [];
+    var _kmk = _kmk || '1d65da64d1552d64979249675423b0772279bd33';
+    function _kms(u){
+      setTimeout(function(){
+        var d = document, f = d.getElementsByTagName('script')[0],
+        s = d.createElement('script');
+        s.type = 'text/javascript'; s.async = true; s.src = u;
+        f.parentNode.insertBefore(s, f);
+      }, 1);
+    }
+    _kms('//i.kissmetrics.com/i.js');
+    _kms('//scripts.kissmetrics.com/' + _kmk + '.2.js');
+
+
+  </script>
+
+
+  <title>Shoptagr | Champion Eco Fleece White Hoodie by Champion</title>
+  <meta name="description" content="Champion Eco Fleece White Hoodie by Champion.Available Colors:WHITE.Available Sizes:Choose an Option...,S,M,L.">
+
+  <!--%= favicon_link_tag 'favicon.ico', type: "image/ico" %-->
+  <link rel="shortcut icon" type="image/png" href="https://assets.shoptagr.com/assets/favicon@2x-196455254ba5df81b61c7afb8db8edf08b7051d9d1a63645f038854da991cdd2.png" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" media="all" href="https://assets.shoptagr.com/assets/application-3cfd0d558703095d5aaf0883d1ec8da2362c893700323d7f137b70e12bb31514.css" data-turbolinks-track="true" />
+  <!--[if IE]>
+    <link rel="stylesheet" media="all" href="https://assets.shoptagr.com/assets/ie-cf6e6135b075298397415d510ff2fee7a19814ffd84f3f32d6c3150f6563ee82.css" data-turbolinks-track="true" />
+  <![endif]-->
+
+  <script src="https://assets.shoptagr.com/assets/application-cd19adbe745f1dbd45036c12d3d87ea5a672cf15970a7a3e96c7faf2518ce0bf.js" data-turbolinks-track="true"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="https://assets.shoptagr.com/assets/html5-f7bf9a0a665bb2b4b720dd6c74128f11a2d9b8b974e886548309a7a0320e7b3e.js" data-turbolinks-track="true"></script>
+  <![endif]-->
+  <meta name="p:domain_verify" content="bea1decace71ece6783a0acf218c32a7" />
+  <meta property="og:site_name" content="Shoptagr" />
+   <meta property="fb:app_id" content="1420933254790757" />
+   <meta property="og:title" content="Shoptagr | Champion Eco Fleece White Hoodie by Champion" />
+     <meta property="og:description" content="Warm, soft and comfortable, Champion&#39;s Eco Fleece White Hoodie has a very basic composition that keeps logo details at a minimum with one signature applique &quot;C&quot; located upon the left sleeve. A solid go-to pullover garment offering a casual layered look to any outfit." />
+   <meta property="og:image" content="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Champion-Eco-Fleece-White-Hoodie-_296096-front-US.jpg" />
+   <meta property="og:url" content="https://www.shoptagr.com/tags/shop/Zumiez/CHAMPION/Champion+Eco+Fleece+White+Hoodie" />
+   <meta property="og:type" content="product" />
+   <meta property="product:retailer_item_id" content="6567048" />
+   <meta property="product:price:amount" content="47.99" />
+   <meta property="product:price:currency" content="USD" />
+   <meta property="product:availability" content="in stock" />
+   <meta property="product:condition" content="new" />
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="lcSpvADXvmp/SZJy6hXa0Um+VWV/NN8udGWevbdHnNJ46oX31/iF3A6YkN9RBpcqfSR876jyUPDn9CBqWYL+Eg==" />
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+        $pixel_code = '427911120893728';
+
+        fbq('init', $pixel_code);
+
+      fbq('track', 'PageView');
+
+    </script>
+      <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=427911120893728&ev=PageView&noscript=1"/></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
+</head>
+<body style="background-color:#fff">
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDGXQ3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Header -->
+
+  
+
+
+          <header class="site-header is-visible">
+            <div class="site-header__top">
+              <div class="social-share">
+                <ul>
+                  <li class="social-share__item--facebook">
+                    <div class="social-share__icon" style="position: fixed;top: 14px;"></div>
+                     <a id="share_facebook_header" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.shoptagr.com%2F%3Fref_src%3Dfacebook" target="_blank">Facebook</a>
+                  </li>
+                  <li class="social-share__item--twitter">
+                    <div class="social-share__icon" style="position: fixed;top: 14px;left: 60px;"></div>
+                    <a id="share_twitter_header" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.shoptagr.com%2F%3Fref_src%3Dtwitter&text=When I find something I want, I save it to Shoptagr!&via=Shoptagr" class="twitter" target="_blank">Twitter</a>
+                  </li>
+                  <li class="social-share__item--pinterest">
+                   <div class="social-share__icon" style="position: fixed;top: 14px;left: 100px;"></div>
+                     <a id="share_pinterest_header" href="http://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.shoptagr.com%2F%3Fref_src%3Dpinterest&media=https%3A%2F%2Fwww.shoptagr.com%2Fassets%2Fimage7.png&description=When+I+find+something+I+want%2C+I+save+it+to+Shoptagr%21" target="_blank">Pinterest</a>
+                  </li>
+                  <li class="social-share__item--email">
+                    <div class="social-share__icon" style="position: fixed;top: 14px;left: 140px;"></div>
+                    <a id="share_mail_header" href="mailto:?subject=Save anything, anywhere!&body=When I find something I want, I save it to Shoptagr! Visit Shoptagr.com today!">Email</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="site-header__brand">
+              </div>
+              <div class="navigation__wrapper" unselectable="on">
+                <div class="navigation__toggle navigation_element-white">
+                  <a class="navigation__toggle__link">
+                    <span class="navigation__current-element">
+
+                    </span>
+                    <i class="navigation__toggle__icon"></i>
+                  </a>
+                </div>
+                <div class="navigation" style="-webkit-transform:translateX(335px);transform:translateX(335px);-ms-transform:translateX(335px);">
+                  <ul class="navigation__item-list">
+                    <li class="navigation__chapter">
+                       <a class="navigation__toggle__link" href="/shop">SHOP</a>
+                    </li>
+                    <li class="navigation__chapter">
+                      <a class="navigation__toggle__link" href="/all_coupons">COUPONS</a>
+                    </li>
+
+                    <li class="navigation__chapter">
+                       <a class="navigation__toggle__link" href="/register">SIGN UP</a>
+                    </li>
+                    <li class="navigation__chapter">
+                       <a class="navigation__toggle__link" href="http://blog.shoptagr.com">NEWS</a>
+                    </li>
+                    <li class="navigation__chapter">
+                      <a class="nav_sec_link" href="/about">ABOUT</a>
+                      <a class="nav_sec_link" href="/home/how_it_works">HOW IT WORKS</a>
+                      <a class="nav_sec_link" href="/get_the_button">GET THE BUTTON</a>
+                      <a class="nav_sec_link" href="/stores">STORES</a>
+                      <a class="nav_sec_link" href="/help">FAQ</a>
+                      <a class="nav_sec_link" href="/contact">CONTACT</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="navigation__wrapper_fixed r1" style="width:60px;right:60px;" unselectable="on">
+                <div class="navigation_element-white">
+                  <a class="navigation__toggle__link" href="http://blog.shoptagr.com">NEWS</a>
+                </div>
+              </div>
+
+               <div class="navigation__wrapper_fixed r2" unselectable="on" style="right: 120px;width:70px;">
+                <div class="navigation_element-white">
+
+                  <a class="navigation__toggle__link" href="/register">SIGN UP</a>
+                </div>
+              </div>
+
+              <div class="navigation__wrapper_fixed r3" unselectable="on" style="right: 180px;">
+                <div class="navigation_element-white">
+                  <a class="navigation__toggle__link" style="padding-right:15px;" href="/shop">SHOP</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="page-black-overlay"></div>
+          </header>
+
+
+ <!-- /Header -->
+
+   <!-- Content -->
+  <div id="content" style="padding:0;">
+    <div class="grid-container">
+      <div class="grid-100 mobile-grid-100">
+         <div id="grid">
+            <div class="fixed_tag shopit" data-id="6567048">
+            <div class="fixed_tag-inner">
+              <div class="item-image">
+                <div class="images shopit">
+                  <a href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=6567048">
+                    <img data-link="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=6567048" class="cloudzoom shopit" title="champion-eco-fleece-white-hoodie by champion" alt="champion-eco-fleece-white-hoodie by champion" data-bigimage="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Champion-Eco-Fleece-White-Hoodie-_296096-front-US.jpg" data-cloudzoom="captionSource: &#39;none&#39;, zoomSizeMode:&#39;lens&#39;, disableZoom: true, image: &#39;https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Champion-Eco-Fleece-White-Hoodie-_296096-front-US.jpg&#39; ,  zoomImage:&#39;https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Champion-Eco-Fleece-White-Hoodie-_296096-front-US.jpg&#39;" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Champion-Eco-Fleece-White-Hoodie-_296096-front-US.jpg" />
+                  </a>
+                    <span class="sold-out-label"></span>
+                  
+
+                  <ul class="group smaller">
+                    <li class="fb"><a style="float:left;"  class="fb" id="facebook_share_specfic_tag" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.shoptagr.com%2Ftags%2Fshop%2FZumiez%2FCHAMPION%2FChampion%2BEco%2BFleece%2BWhite%2BHoodie" target="_blank"></a></li>
+                    <li class="twitter"><a class="twitter" id="twitter_share_specfic_tag" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.shoptagr.com%2Ftags%2Fshop%2FZumiez%2FCHAMPION%2FChampion%2BEco%2BFleece%2BWhite%2BHoodie&text=When I find something I want, I save it to Shoptagr!&via=Shoptagr" class="twitter" target="_blank"></a> </li>
+                    <li class="pinterest"><a style="float:right;" id="pinterest_share_specfic_tag" class="pinterest" href="http://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.shoptagr.com%2Ftags%2Fshop%2FZumiez%2FCHAMPION%2FChampion%2BEco%2BFleece%2BWhite%2BHoodie&media=http%3A%2F%2Fscene7.zumiez.com%2Fis%2Fimage%2Fzumiez%2Fpdp_hero%2FChampion-Eco-Fleece-White-Hoodie-_296096-front-US.jpg&description=When+I+find+something+I+want%2C+I+save+it+to+Shoptagr%21" target="_blank"></a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="item-detail on-sale">
+
+                <h1 id="item-shared-tag" >
+                    <span>CHAMPION</span>
+
+                </h1>
+                <h2 id="item-brand">CHAMPION ECO FLEECE WHITE HOODIE</h2>
+
+                <table class="product-retailers">
+                 <tbody>
+                  <tr>
+                    <td class="product-price text-center">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <ul style="width:100%;clear:both;display:inline-block;margin-top:0px;margin-bottom:0px;">
+                  <li class="b1"><a target="_blank" class="buy-item" rel="nofollow" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=6567048">BUY ON STORE</a></li>
+                    <li class="b2"><a class="track-item-table" rel="nofollow" href="/register?ref_src=SEO&amp;campaign=ALERT_ME&amp;tagged_item=6567048">ALERT ME</a></li>
+
+
+              </ul>
+
+                <div id="detail-tabs" style="">
+                  <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all" style="margin-bottom:20px;">
+                    <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+                      <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true"><a href="#tabs-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">Details</a></li>
+                    </ul>
+                    <div id="tabs-wrapper">
+                      <div id="tabs-1" class="tab ui-tabs-panel ui-widget-content ui-corner-bottom" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false" style="display: block;" >
+                          <p style="margin-bottom:0px;">Warm, soft and comfortable, Champion&#39;s Eco Fleece White Hoodie has a very basic composition that keeps logo details at a minimum with one signature applique &quot;C&quot; located upon the left sleeve. A solid go-to pullover garment offering a casual layered look to any outfit.</p>
+                          <ul class="list">
+                              <!-- colors : begin -->
+                              <li class="small">
+                                <label>Colors:</label>
+                                WHITE
+                              </li>
+                              <!-- colors : end -->
+
+                              <!-- sizes : begin -->
+                              <li class="small">
+                                <label>Sizes:</label>
+                                S, M, L
+                              </li>
+                              <!-- sizes : end -->
+                          </ul>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="fixed_tag-bottom" style="display:inline-block;width:100%">
+                <h2>YOU MIGHT ALSO LIKE</h2>
+            </div>
+          </div>
+
+          <div class="items group seo" style="margin-top:0px;">
+            <div class="dashboard-items item-preview group">
+              <div id="tags_list">
+                
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19302114">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/champion/champion-tiny-stripe-white-&amp;-black-t-shirt" target="_blank">
+        <img class="tag-image" title="Champion Tiny Stripe White &amp; Black T Shirt by Champion" alt="Champion Tiny Stripe White &amp; Black T Shirt by Champion" src="https://images-cf.shoptagr.com/fog_uploads/tag_19302114/c_pad%2Ch_352%2Cw_270/19302114.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19302114" rel="nofollow">
+      <h4 class="brand">CHAMPION</h4>
+      <h5 class="title" title="Champion Tiny Stripe White &amp; Black T-Shirt">Champion Tiny Stripe White &amp; Black T-Shirt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$34.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19302114" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19298669">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/empyre/empyre-black-&amp;-silver-studded-belt" target="_blank">
+        <img class="tag-image" title="Empyre Black &amp; Silver Studded Belt by Empyre" alt="Empyre Black &amp; Silver Studded Belt by Empyre" src="https://images-cf.shoptagr.com/fog_uploads/tag_19298669/c_pad%2Ch_352%2Cw_270/19298669.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19298669" rel="nofollow">
+      <h4 class="brand">EMPYRE</h4>
+      <h5 class="title" title="Empyre Black &amp; Silver Studded Belt">Empyre Black &amp; Silver Studded Belt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$19.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19298669" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19298011">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/welcome-skateboards/welcome-surf-stripe-gold-&amp;-teal-long-sleeve-t-shirt" target="_blank">
+        <img class="tag-image" title="Welcome Surf Stripe Gold &amp; Teal Long Sleeve T Shirt by Welcome Skateboards" alt="Welcome Surf Stripe Gold &amp; Teal Long Sleeve T Shirt by Welcome Skateboards" src="https://images-cf.shoptagr.com/fog_uploads/tag_19298011/c_pad%2Ch_352%2Cw_270/19298011.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19298011" rel="nofollow">
+      <h4 class="brand">WELCOME SKATEBOARDS</h4>
+      <h5 class="title" title="Welcome Surf Stripe Gold &amp; Teal Long Sleeve T-Shirt">Welcome Surf Stripe Gold &amp; Teal Long Sleeve T-Shirt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$44.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19298011" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19297692">
+  <div class="widget on-sale">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/obey/obey-ollie-plaid-overalls" target="_blank">
+        <img class="tag-image" title="Obey Ollie Plaid Overalls by Obey" alt="Obey Ollie Plaid Overalls by Obey" src="https://images-cf.shoptagr.com/fog_uploads/tag_19297692/c_pad%2Ch_352%2Cw_270/19297692.jpg" />
+      </a>
+
+
+        <span class="on-sale-label"></span>
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19297692" rel="nofollow">
+      <h4 class="brand">OBEY</h4>
+      <h5 class="title" title="Obey Ollie Plaid Overalls">Obey Ollie Plaid Overalls</h5>
+        <h5 class="price">
+        <span class="original  ">$87.95</span>
+
+          <span class="sale">$59.99</span>
+          <span class="sale" style="font-weight:400">(32% OFF)</span>
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19297692" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19297659">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/vans/vans-era-tango-red-tie-dye-skate-shoes" target="_blank">
+        <img class="tag-image" title="Vans Era Tango Red Tie Dye Skate Shoes by Vans" alt="Vans Era Tango Red Tie Dye Skate Shoes by Vans" src="https://images-cf.shoptagr.com/fog_uploads/tag_19297659/c_pad%2Ch_352%2Cw_270/19297659.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19297659" rel="nofollow">
+      <h4 class="brand">VANS</h4>
+      <h5 class="title" title="Vans Era Tango Red Tie Dye Skate Shoes">Vans Era Tango Red Tie Dye Skate Shoes</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$59.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19297659" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19297643">
+  <div class="widget on-sale">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/slushcult/slushcult-cross-cup-red-beanie" target="_blank">
+        <img class="tag-image" title="Slushcult Cross Cup Red Beanie by Slushcult" alt="Slushcult Cross Cup Red Beanie by Slushcult" src="https://images-cf.shoptagr.com/fog_uploads/tag_19297643/c_pad%2Ch_352%2Cw_270/19297643.jpg" />
+      </a>
+
+
+        <span class="on-sale-label"></span>
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19297643" rel="nofollow">
+      <h4 class="brand">SLUSHCULT</h4>
+      <h5 class="title" title="Slushcult Cross Cup Red Beanie">Slushcult Cross Cup Red Beanie</h5>
+        <h5 class="price">
+        <span class="original  ">$23.95</span>
+
+          <span class="sale">$17.99</span>
+          <span class="sale" style="font-weight:400">(25% OFF)</span>
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19297643" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19296949">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/petals-and-peacocks/petals-&amp;-peacocks-good-intentions-cherub-white-t-shirt" target="_blank">
+        <img class="tag-image" title="Petals &amp; Peacocks Good Intentions Cherub White T Shirt by Petals And Peacocks" alt="Petals &amp; Peacocks Good Intentions Cherub White T Shirt by Petals And Peacocks" src="https://images-cf.shoptagr.com/fog_uploads/tag_19296949/c_pad%2Ch_352%2Cw_270/19296949.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19296949" rel="nofollow">
+      <h4 class="brand">PETALS AND PEACOCKS</h4>
+      <h5 class="title" title="Petals &amp; Peacocks Good Intentions Cherub White T-Shirt">Petals &amp; Peacocks Good Intentions Cherub White T-Shirt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$34.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19296949" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19296918">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/vans/vans-lizzie-knot-front-black-&amp;-white-t-shirt" target="_blank">
+        <img class="tag-image" title="Vans Lizzie Knot Front Black &amp; White T Shirt by Vans" alt="Vans Lizzie Knot Front Black &amp; White T Shirt by Vans" src="https://images-cf.shoptagr.com/fog_uploads/tag_19296918/c_pad%2Ch_352%2Cw_270/19296918.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19296918" rel="nofollow">
+      <h4 class="brand">VANS</h4>
+      <h5 class="title" title="Vans Lizzie Knot Front Black &amp; White T-Shirt">Vans Lizzie Knot Front Black &amp; White T-Shirt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$29.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19296918" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19295347">
+  <div class="widget on-sale">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/hypland-worldwide/hypland-world-tour-white-t-shirt" target="_blank">
+        <img class="tag-image" title="Hypland World Tour White T Shirt by Hypland Worldwide" alt="Hypland World Tour White T Shirt by Hypland Worldwide" src="https://images-cf.shoptagr.com/fog_uploads/tag_19295347/c_pad%2Ch_352%2Cw_270/19295347.jpg" />
+      </a>
+
+
+        <span class="on-sale-label"></span>
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19295347" rel="nofollow">
+      <h4 class="brand">HYPLAND WORLDWIDE</h4>
+      <h5 class="title" title="Hypland World Tour White T-Shirt">Hypland World Tour White T-Shirt</h5>
+        <h5 class="price">
+        <span class="original  ">$29.95</span>
+
+          <span class="sale">$21.99</span>
+          <span class="sale" style="font-weight:400">(27% OFF)</span>
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19295347" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19294518">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/ripndip/ripndip-nermal-romantic-rose-gold-long-sleeve-t-shirt" target="_blank">
+        <img class="tag-image" title="Ripndip Nermal Romantic Rose Gold Long Sleeve T Shirt by Ripndip" alt="Ripndip Nermal Romantic Rose Gold Long Sleeve T Shirt by Ripndip" src="https://images-cf.shoptagr.com/fog_uploads/tag_19294518/c_pad%2Ch_352%2Cw_270/19294518.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19294518" rel="nofollow">
+      <h4 class="brand">RIPNDIP</h4>
+      <h5 class="title" title="RIPNDIP Nermal Romantic Rose Gold Long Sleeve T-Shirt">RIPNDIP Nermal Romantic Rose Gold Long Sleeve T-Shirt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$34.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19294518" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19292998">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/vans/vans-checkwork-blue-long-sleeve-t-shirt" target="_blank">
+        <img class="tag-image" title="Vans Checkwork Blue Long Sleeve T Shirt by Vans" alt="Vans Checkwork Blue Long Sleeve T Shirt by Vans" src="https://images-cf.shoptagr.com/fog_uploads/tag_19292998/c_pad%2Ch_352%2Cw_270/19292998.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19292998" rel="nofollow">
+      <h4 class="brand">VANS</h4>
+      <h5 class="title" title="Vans Checkwork Blue Long Sleeve T-Shirt">Vans Checkwork Blue Long Sleeve T-Shirt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$27.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19292998" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19292994">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/vans/vans-rainee-white-crop-crew-neck-sweatshirt" target="_blank">
+        <img class="tag-image" title="Vans Rainee White Crop Crew Neck Sweatshirt by Vans" alt="Vans Rainee White Crop Crew Neck Sweatshirt by Vans" src="https://images-cf.shoptagr.com/fog_uploads/tag_19292994/c_pad%2Ch_352%2Cw_270/19292994.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19292994" rel="nofollow">
+      <h4 class="brand">VANS</h4>
+      <h5 class="title" title="Vans Rainee White Crop Crew Neck Sweatshirt">Vans Rainee White Crop Crew Neck Sweatshirt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$39.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19292994" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19292874">
+  <div class="widget on-sale">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/obey/obey-barbed-box-pigment-eggplant-long-sleeve-t-shirt" target="_blank">
+        <img class="tag-image" title="Obey Barbed Box Pigment Eggplant Long Sleeve T Shirt by Obey" alt="Obey Barbed Box Pigment Eggplant Long Sleeve T Shirt by Obey" src="https://images-cf.shoptagr.com/fog_uploads/tag_19292874/c_pad%2Ch_352%2Cw_270/19292874.jpg" />
+      </a>
+
+
+        <span class="on-sale-label"></span>
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19292874" rel="nofollow">
+      <h4 class="brand">OBEY</h4>
+      <h5 class="title" title="Obey Barbed Box Pigment Eggplant Long Sleeve T-Shirt">Obey Barbed Box Pigment Eggplant Long Sleeve T-Shirt</h5>
+        <h5 class="price">
+        <span class="original  ">$37.95</span>
+
+          <span class="sale">$29.99</span>
+          <span class="sale" style="font-weight:400">(21% OFF)</span>
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19292874" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19292823">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/obey/obey-understanding-lavender-long-sleeve-t-shirt" target="_blank">
+        <img class="tag-image" title="Obey Understanding Lavender Long Sleeve T Shirt by Obey" alt="Obey Understanding Lavender Long Sleeve T Shirt by Obey" src="https://images-cf.shoptagr.com/fog_uploads/tag_19292823/c_pad%2Ch_352%2Cw_270/19292823.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19292823" rel="nofollow">
+      <h4 class="brand">OBEY</h4>
+      <h5 class="title" title="Obey Understanding Lavender Long Sleeve T-Shirt">Obey Understanding Lavender Long Sleeve T-Shirt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$31.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19292823" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19292767">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/obey/obey-no-love-lost--box-white-t-shirt" target="_blank">
+        <img class="tag-image" title="Obey No Love Lost  Box White T Shirt by Obey" alt="Obey No Love Lost  Box White T Shirt by Obey" src="https://images-cf.shoptagr.com/fog_uploads/tag_19292767/c_pad%2Ch_352%2Cw_270/19292767.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19292767" rel="nofollow">
+      <h4 class="brand">OBEY</h4>
+      <h5 class="title" title="Obey No Love Lost  Box White T-Shirt">Obey No Love Lost  Box White T-Shirt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$29.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19292767" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19292695">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/sprayground/sprayground-shark-tongue-remix-purple-backpack" target="_blank">
+        <img class="tag-image" title="Sprayground Shark Tongue Remix Purple Backpack by Sprayground" alt="Sprayground Shark Tongue Remix Purple Backpack by Sprayground" src="https://images-cf.shoptagr.com/fog_uploads/tag_19292695/c_pad%2Ch_352%2Cw_270/19292695.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19292695" rel="nofollow">
+      <h4 class="brand">SPRAYGROUND</h4>
+      <h5 class="title" title="Sprayground Shark Tongue Remix Purple Backpack">Sprayground Shark Tongue Remix Purple Backpack</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$69.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19292695" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19292122">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/vans/vans-rose-white-&amp;-blue-crop-t-shirt" target="_blank">
+        <img class="tag-image" title="Vans Rose White &amp; Blue Crop T Shirt by Vans" alt="Vans Rose White &amp; Blue Crop T Shirt by Vans" src="https://images-cf.shoptagr.com/fog_uploads/tag_19292122/c_pad%2Ch_352%2Cw_270/19292122.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19292122" rel="nofollow">
+      <h4 class="brand">VANS</h4>
+      <h5 class="title" title="Vans Rose White &amp; Blue Crop T-Shirt">Vans Rose White &amp; Blue Crop T-Shirt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$32.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19292122" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19292079">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/vans/vans-lime-stage-crew-crop-t-shirt" target="_blank">
+        <img class="tag-image" title="Vans Lime Stage Crew Crop T Shirt by Vans" alt="Vans Lime Stage Crew Crop T Shirt by Vans" src="https://images-cf.shoptagr.com/fog_uploads/tag_19292079/c_pad%2Ch_352%2Cw_270/19292079.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19292079" rel="nofollow">
+      <h4 class="brand">VANS</h4>
+      <h5 class="title" title="Vans Lime Stage Crew Crop T-Shirt">Vans Lime Stage Crew Crop T-Shirt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$29.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19292079" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19291993">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/champion/champion-boys-script-logo-scarlet-t-shirt" target="_blank">
+        <img class="tag-image" title="Champion Boys Script Logo Scarlet T Shirt by Champion" alt="Champion Boys Script Logo Scarlet T Shirt by Champion" src="https://images-cf.shoptagr.com/fog_uploads/tag_19291993/c_pad%2Ch_352%2Cw_270/19291993.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19291993" rel="nofollow">
+      <h4 class="brand">CHAMPION</h4>
+      <h5 class="title" title="Champion Boys Script Logo Scarlet T-Shirt">Champion Boys Script Logo Scarlet T-Shirt</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$24.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19291993" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+
+<div class="grid-25 mobile-grid-50 dashboard seo"  data-tag-index="19291969">
+  <div class="widget ">
+    <div class="content">
+      <a href="https://www.shoptagr.com/shop/zumiez/champion/champion-chainstitch-seal-applique-oxford-grey-sweatpants" target="_blank">
+        <img class="tag-image" title="Champion Chainstitch Seal Applique Oxford Grey Sweatpants by Champion" alt="Champion Chainstitch Seal Applique Oxford Grey Sweatpants by Champion" src="https://images-cf.shoptagr.com/fog_uploads/tag_19291969/c_pad%2Ch_352%2Cw_270/19291969.jpg" />
+      </a>
+
+
+    </div>
+  </div>
+  <figcaption style="height:84px;">
+    <div class="product-link" data-tag-id="19291969" rel="nofollow">
+      <h4 class="brand">CHAMPION</h4>
+      <h5 class="title" title="Champion Chainstitch Seal Applique Oxford Grey Sweatpants">Champion Chainstitch Seal Applique Oxford Grey Sweatpants</h5>
+        <h5 class="price">
+        <span class="original no_sale ">$54.95</span>
+
+        </h5>
+    </div>
+  </figcaption>
+    <a class="buy-btn" target="_blank" style="" href="/ref/capture?afsrc=1&amp;source=SEO_Page&amp;tag_id=19291969" rel="nofollow">BUY AT ZUMIEZ</a>
+  <div style="margin-bottom:35px;border-bottom:1px solid #e7e7e7;position: relative;top: 90px;"></div>
+</div>
+
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Signup Popup -->
+  <!-- Login Popup -->
+<div id="signup-popup" class="popup">
+  <div class="popup-inner">
+  	<div class="logo">
+     <h1 style="width:68px;"><a href="http://www.shoptagr.com">Shoptagr</a></h1>
+    </div>
+
+    <h2 class="reason">SAVE IT FOR LATER. BUY WHEN READY.</h2>
+
+    <div class="signup_sections">
+      <ul>
+        <li><a class="facebook" id="popup_facebook_signup" href="/auth/facebook?ref_src=SEO"><span></span>SIGN UP WITH FACEBOOK</a></li>
+        <li><a href="/register?popup=1&ref_src=SEO" class="mail" id="popup_email_signup">SIGN UP WITH EMAIL ADDRESS</a></li>
+
+      </ul>
+    </div>
+
+     <p>OR SIGN UP WITH <a id="popup_twitter_signup" href="/auth/twitter?ref_src=SEO">TWITTER</a> OR 
+      <a id="popup_gplus_signup" href="/auth/google_oauth2?ref_src=SEO">GOOGLE</a></p>
+  
+     <p class="bigger">Already have an account? <strong><a id="login_from_popup" href="/login">Log in now</a></strong></p>
+
+     <p>By continuing, you agree to Shoptagr's <a target="_blank" href="legal/terms">Terms of Service</a>, <a target="_blank" href="legal/privacy">Privacy Policy</a> </p>
+
+
+     
+         <div class="email_signup_inner" style="display:none;">
+
+           <div class="user-form">
+            <form novalidate="novalidate" class="simple_form new_user" id="new_user" action="/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="AI0/Azgh5KbkqTLyEVKEsMqogvjAyS+nAPzuh8sgUDjtoxNI7w7fEJV4MF+qQclL/jKrchcPoHmTbVBQJeUy+A==" />
+              <input value="1" type="hidden" name="user[remember_me]" id="user_remember_me" />
+                <input value="SEO" type="hidden" name="user[ref_src]" id="user_ref_src" />
+                <input value="SEO" type="hidden" name="user[referral_src]" id="user_referral_src" />
+                <input value="ALERT_ME" type="hidden" name="user[campaign]" id="user_campaign" />
+              
+              <ul class="group">
+                <li>
+                  <div class="input email optional user_email"><input class="string email optional email" placeholder="Your Email" tabindex="1" autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" /></div>
+                </li>
+                <li>
+                 <div class="input string optional user_name"><input class="string optional email" placeholder="Your Full Name" tabindex="2" type="text" name="user[name]" id="user_name" /></div>
+                </li>
+
+                  <li style="padding-left:70px;">
+                    <div class="input select optional user_gender"><select class="select optional selectbox" id="gender" tabindex="3" name="user[gender]"><option value="Female">Female</option>
+<option value="Male">Male</option>
+<option value="I don&#39;t want to share">I don&#39;t want to share</option></select></div> 
+                  </li>
+                <li>
+                  <div class="input password optional user_password"><input class="password optional password" placeholder="Password" tabindex="4" type="password" name="user[password]" id="user_password" /></div>
+                </li>
+                <li class="last"><input type="submit" name="commit" value="JOIN US" class="login" id="submit_register_form" tabindex="5" data-disable-with="PLEASE WAIT..." /></li>
+              </ul>
+</form>            </div>
+          </div>
+
+     <a class="popup-close">x</a> </div>
+</div>
+<!-- /Login Popup -->
+  <!-- Signup Popup -->
+
+
+<script src="https://assets.shoptagr.com/assets/cloudzoom-6762d74904407667d45dac8c17200292b8a7378a1198be8051addb1b0cb0e8c8.js"></script>
+<script src="https://assets.shoptagr.com/assets/jquery.fancybox-82cbae579b6196374039d63a6545654c34d53f4c924d1d162869c646f2d0379a.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "description": "Warm, soft and comfortable, Champion&#39;s Eco Fleece White Hoodie has a very basic composition that keeps logo details at a minimum with one signature applique &quot;C&quot; located upon the left sleeve. A solid go-to pullover garment offering a casual layered look to any outfit.",
+  "name": "Champion Eco Fleece White Hoodie",
+  "brand": {
+    "@type": "Thing",
+    "name": "CHAMPION"
+  },
+  "image": "https://scene7.zumiez.com/is/image/zumiez/pdp_hero/Champion-Eco-Fleece-White-Hoodie-_296096-front-US.jpg",
+  "url": "https://www.shoptagr.com/shop/zumiez/champion/champion-eco-fleece-white-hoodie",
+  "offers": {
+    "@type": "Offer",
+    "availability": "http://schema.org/SoldOut",
+    "price": "59.95",
+    "priceCurrency": "USD",
+    "itemCondition": "http://schema.org/NewCondition",
+    "seller": {
+      "@type": "Organization",
+      "name": "Zumiez"
+    }
+  }
+}
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $("a#sb-discard").on("click",function(e){
+      $("#shoptagrAppSmartBanner").hide();
+    });
+
+    $(".ui-tabs-anchor").on("click",function(e){
+      e.preventDefault(), e.stopPropagation();
+
+      $("ul.ui-tabs-nav li").removeClass("ui-tabs-active").removeClass("ui-state-active");
+      $(this).parent().addClass("ui-tabs-active").addClass("ui-state-active");
+
+      section_href = $(this).attr("href");
+      $("#tabs-wrapper .tab").hide();
+      $(section_href).show();
+    });
+
+    $(".ui-tabs-nav li.ui-state-default").hover(function(e){
+      e.preventDefault(), e.stopPropagation();
+      $(this).addClass("ui-state-hover");
+    }, function(e){
+      e.preventDefault(), e.stopPropagation();
+      $(this).removeClass("ui-state-hover");
+    });
+
+    if (isMobile()) {
+    }
+    else{
+
+      CloudZoom.quickStart();
+        // Bind a click event to a Cloud Zoom instance.
+      $('.cloudzoom.shopit').bind('click',function(){
+            location.href = $(this).data("link")
+          return false;
+      });
+      //$('.cloudzoom').CloudZoom();
+        $(".track-item-table").tooltip({title: "WE'LL NOTIFY YOU WHEN IT COMES BACK-IN-STOCK", placement: 'bottom', template:'<div class="tooltip plus" style="width:340px;margin-top:2px;" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'});
+
+      //Overlay Holder For Signup Popup
+      $("#signup-popup").overlay({
+        mask: {
+              color: '#000',
+              loadSpeed:10,
+              opacity: 0.8
+        },
+        fixed: true,
+        close: '.popup-close,.btn2',
+        top: 'center',
+        left: 'center',
+        onClose : function(){
+          _kmq.push(['record', 'Exited Signup Popup ', {'_d': 1, '_t': Math.round((new Date()).getTime() / 1000)}]);
+        }
+      });
+
+      $(".buy-item").on("click",function(e){
+        e.preventDefault(), e.stopPropagation();
+
+        dataLayer.push({'event': 'BuyNow-click'});
+
+        location.href = e.currentTarget.href
+
+        return false;
+      });
+
+        //SIGNUP Popup Event Handler
+          $('a.track-item-table').on("click",function(e){
+            e.preventDefault(), e.stopPropagation();
+
+            dataLayer.push({'event': 'CreateSaleAlert-click'});
+
+            $(".track-homepage_hero_down_arrow").hide();
+
+            $(".email_signup_inner").hide();
+            $("#signup-popup p").show();
+            $(".signup_sections").show();
+
+            $signupPopup = $("#signup-popup");
+            $signupPopup.overlay().load();
+
+
+            _kmq.push(['record', 'Clicked On Signup Button', {'from' : 'SEO Page', '_d': 1, '_t': Math.round((new Date()).getTime() / 1000)}]);
+
+            $("a.mail").on("click",function(e){
+              e.preventDefault(), e.stopPropagation();
+              $("#signup-popup p").hide();
+              $(".signup_sections").hide()
+              $(".email_signup_inner").show();
+
+              //$('.selectbox').off();
+              $('.selectbox').sSelect({
+               ddMaxHeight: '260px'
+              });
+
+              $(".new_user").validate({
+                rules: {
+                  "user[email]": {
+                    required: true,
+                    email: true
+                  },
+                  "user[password]": {
+                    required: true,
+                    minlength: 8
+                  },
+                  "user[name]": {
+                    required: true,
+                    email: false
+                  },
+
+               },
+
+               errorElement : 'div',
+               errorLabelContainer: '.errorTxt'
+
+
+              });
+
+
+              return false;
+            });
+
+            $("a.popup-close").on("click",function(e){
+
+
+
+            });
+            return false;
+
+          });
+    }
+  });
+</script>
+
+
+
+
+
+
+  <!-- Footer -->
+    
+    
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1420933254790757";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <footer class="homepage_footer" >
+
+
+            <p>FEATURED BY</p>
+            <div class="press" style="margin-left:0;">
+              <ul class="group" style="padding-left:0;width:100%">
+                <a href="http://www.instyle.com" target="_blank"><li class="instyle" style=""><img alt="Logo" src="https://assets.shoptagr.com/assets/Instyle_white-69aee66bb034db9ef8905428001624c9e401a12c33e8eb49483edb3ad69a5f3a.png" /></li></a>
+                <a href="http://techcrunch.com/2015/05/18/price-tracking-service-poachit-shuts-down/" target="_blank"><li class="tc" style=""><img alt="Logo" src="https://assets.shoptagr.com/assets/TC_White-aa6bc2bfa3992bfadd489d5258d18f1a397b92952e088bd0982bd24e3c724617.png" /></li></a>
+                <a href="http://www.buzzfeed.com/laraparker/secrets-every-bargain-shopper-needs-to-know#.awlzGAqXz" target="_blank"><li class="buzzfeed" style=""><img alt="Logo" src="https://assets.shoptagr.com/assets/Buzzfeed_white-4b05d2daefe44b0b12ba9a186d669565d032868f068263f777d29d1a77f28bab.png" /></li></a>
+                <a href="http://wwd.com" target="_blank"><li class="wwd" style=""><img alt="Logo" src="https://assets.shoptagr.com/assets/WWD_white-045822e75ba951be4b4ff1638fa820ab97dad280f2df69545352f09322c55a8a.png" /></li></a>
+                <a href="http://www.refinery29.com/fashion-girl-moments#slide-9" target="_blank"><li class="refinery29" style=""><img alt="Logo" src="https://assets.shoptagr.com/assets/Refinery29-0a535b8c528cb39ea3e2a19df0a7456f72e699ae44bb031d1e377dbad8ead80d.png" /></li></a>
+                <a href="http://fashionista.com/2014/04/lyst-hukkster-shoptagr-nifti" target="_blank"><li class="fashionista" style=""><img alt="Logo" src="https://assets.shoptagr.com/assets/Fashionista_white-e00ea5447ac6e24f1b548231b1bcf85ed0a90322d9f1ef718b1519a14bb36fdf.png" /></li></a>
+              </ul>
+            </div>
+
+            <section>
+                <div class="col3">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="/about">ABOUT</a></li>
+                        <li><a href="/advertise">ADVERTISE</a></li>
+                        <li><a href="/team">TEAM</a></li>
+                        <li><a href="/press">PRESS</a></li>
+                        <li><a href="/careers">CAREERS</a></li>
+                        <li><a href="/contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                 <div class="col3">
+                    <h3>PRODUCT</h3>
+                    <ul>
+                        <li><a href="/shop">DISCOVER &amp; SHOP</a></li>
+                        <li><a href="/home/how_it_works">HOW IT WORKS</a></li>
+                        <li><a href="/get_the_button">GET THE BUTTON</a></li>
+                        <li><a href="/stores">SUPPORTED STORES</a></li>
+                    </ul>
+                </div>  
+                <div class="col3 last">
+                    <h3>LET'S CONNECT!</h3>
+                    
+                    <ul class="social">
+                      <li><a class="fb" href="https://www.facebook.com/Shoptagr" target="_blank"></a></li>
+                      <li><a class="twitter" href="https://www.twitter.com/Shoptagr" target="_blank"></a></li>
+                      <li><a class="pinterest" href="http://www.pinterest.com/shoptagr" target="_blank"></a></li>
+                    </ul>
+                    <div class="fb_container">
+                        <div style ="margin-right:5px;" class="fb-like" data-href="https://www.facebook.com/Shoptagr" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false">
+                        </div>
+                    </div>
+                    </br>
+                    <ul>
+                        <li><a href="http://blog.shoptagr.com">BLOG</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="footer-copyright">©2019 Shoptagr Ltd. All Rights Reserved. 
+              <div class="footer-legal-links">
+                <a href="/legal/terms">Terms Of Service</a> | <a href="/legal/privacy">Privacy Policy</a>
+              </div>
+            </div>
+      </footer>
+ 
+
+    <script type="text/javascript" data-cfasync="false">
+      (function(W,i,s,e,P,o,p){W['WisePopsObject']=P;W[P]=W[P]||function(){
+      (W[P].q=W[P].q||[]).push(arguments)},W[P].l=1*new Date();o=i.createElement(s),
+      p=i.getElementsByTagName(s)[0];o.async=1;o.src=e;p.parentNode.insertBefore(o,p)
+      })(window,document,'script','//loader.wisepops.com/get-loader.js?v=1&site=rGnYY6c3GD','wisepops');
+    </script>
+
+</body>
+</html>
