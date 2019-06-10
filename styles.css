@@ -5,16 +5,44 @@ html {
 * {
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
+    list-style: none;
 }
 
-nav {
-    
+.nav {
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    margin: 5vh 0px;
+    /* first number top/bottom then left right */
+    padding: 2vh 0px;
+    }
+
+.nav li{
+    margin: 0px 2%;
 }
 
-nav a {
-    
+.left, .right, .bottom {
+    min-height: 200px;
+    background-color: darkgray;
+}
+
+.left{
+    width: 30%;
+}
+
+.right {
+    background-color: red;
+    width: 70%;
+}
+
+.bottom {
+    width: 100%;
 }
 
 section {
-    
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
 }
