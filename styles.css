@@ -12,14 +12,16 @@ html {
 .nav {
     background-color: white;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
     margin: 5vh 0px;
     /* first number top/bottom then left right */
     padding: 2vh 0px;
     }
 
+
 .nav li{
-    margin: 0px 2%;
+    margin: 13px 2%;
 }
 
 .left, .right, .bottom {
