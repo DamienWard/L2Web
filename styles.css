@@ -9,25 +9,44 @@ html {
     list-style: none;
 }
 
+
 body {
     display: flex;
     flex-wrap: wrap;
 }
 
-
 .nav {
-    background-color: white;
-    width: 30%;
+    background-color: lightyellow;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 12%;
     height: 90vh;
 }
 
-.nav li{
-    margin: 13px 2%;
-    width: 100%;
+.nav h1 {
+    margin: 5vh 0px 1vh 0px;
 }
 
 .nav img {
-    width: 100%;
+    margin: 1vh 0px 7vh 0px;
+    width: 70%;
+}
+
+
+.nav li{
+    width: 90%;
+    padding: 1vh 0px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.nav li:hover {
+    background-color: red;
 }
 
 .left, .right, .bottom {
@@ -49,15 +68,20 @@ body {
 }
 
 section {
-    width: 70%;
-    height: 90vh;
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
+    width: 80%;
+}
+body img {
+    width: 10%;
 }
 
-footer {
-    background-color: greenyellow;
-    height: 10vh;
-    width: 100vw;
+.title {
+    border: 2px solid black;
+    background-color: aqua;
+    border-radius: 20px;
+    height: 10%;
+    width: 90%;
+    font-size: 480%;
+    font-family: serif, Unforgotten
 }
