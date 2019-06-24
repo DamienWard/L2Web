@@ -9,20 +9,25 @@ html {
     list-style: none;
 }
 
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 .nav {
     background-color: white;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin: 5vh 0px;
-    /* first number top/bottom then left right */
-    padding: 2vh 0px;
-    }
-
+    width: 30%;
+    height: 90vh;
+}
 
 .nav li{
     margin: 13px 2%;
+    width: 100%;
+}
+
+.nav img {
+    width: 100%;
 }
 
 .left, .right, .bottom {
@@ -44,8 +49,15 @@ html {
 }
 
 section {
+    width: 70%;
+    height: 90vh;
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
-    margin: auto;
+    overflow: hidden;
+}
+
+footer {
+    background-color: greenyellow;
+    height: 10vh;
+    width: 100vw;
 }
