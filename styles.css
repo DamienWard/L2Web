@@ -30,6 +30,9 @@ body {
     width: 12%;
     margin: 1%;
     height: 90vh;
+    font-family: fonty;
+    font-size: 1vw;
+
 }
 
 .nav h1 {
@@ -52,7 +55,7 @@ body {
 }
 
 .nav li:hover {
-    background-color: red;
+    background-color: aqua;
 }
 
 .left, .right, .bottom {
@@ -67,12 +70,14 @@ body {
 */
 
 .right {
-    background-color: red;
+    background-color: lightsteelblue;
     width: 100%;
 }
 
 .bottom {
     width: 100%;
+    background-color: whitesmoke;
+
 }
 
 section {
@@ -94,4 +99,9 @@ body img {
     font-size: 6vw;
     font-family: fonty;
     margin-top: 3vh;
+}
+
+h1 {
+    font-family: fonty;
+    text-align: center;
 }
