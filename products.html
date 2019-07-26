@@ -1,0 +1,117 @@
+<!doctype html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Streep Clothing Line</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <ul class="nav">
+         <li class="bgLess">
+            <a class="title" href="index.html">Streep</a>
+        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+         <li class="bgLess">
+            <img alt="stuff" src="Logos/logo.png">
+        </li>
+    </ul>
+    <section>
+        <!--
+        <div class='left'>
+        </div>
+-->
+
+
+        <div class='right'>
+            <h6>Size Calculator</h6>
+            <script>
+                function calculate() {
+                    var data = document.getElementById("neckSize").value;
+                    if (data < 33) {
+                        document.getElementById("answer").innerHTML = "You are smaller than the smallest size";
+                    }
+                    else if (data > 33 && data < 35) {
+                        document.getElementById("answer").innerHTML = "Your size is XXS";
+                    }
+                    else if (data >= 35 && data < 37) {
+                        document.getElementById("answer").innerHTML = "Your size is XS";
+                    }
+                    else if (data >= 37 && data < 39) {
+                        document.getElementById("answer").innerHTML = "Your size is S";
+                    }
+                    else if (data >= 39 && data < 41) {
+                        document.getElementById("answer").innerHTML = "Your size is M";
+                    }
+                    else if (data >= 41 && data < 43) {
+                        document.getElementById("answer").innerHTML = "Your size is L";
+                    }
+                    else if (data >= 43 && data < 45) {
+                        document.getElementById("answer").innerHTML = "Your size is XL";
+                    }
+                    else if (data >= 45 && data < 47) {
+                        document.getElementById("answer").innerHTML = "Your size is XXL";
+                    }
+                    else {
+                        document.getElementById("answer").innerHTML = "Your larger than the biggest size";
+                    }
+                }
+
+            </script>
+
+            <input type="number" name="neck" id="neckSize">
+            <button type="submit" onClick="calculate()">Submit</button>
+            <p id="answer"></p>
+
+
+
+
+
+            <h1>Our lastest collection!</h1>
+            <ul class="products">
+                <li>
+                    <img alt="stuff" src="Images/t-shirt%201.png">
+                    <h1>$35</h1>
+                </li>
+                <li>
+                    <img alt="stuff" src="Images/t-shirt2.png">
+                    <h1>$35</h1>
+                </li>
+                <li>
+                    <img alt="stuff" src="Images/t-shirt3.png">
+                    <h1>$35</h1>
+                </li>
+                <li>
+                    <img alt="stuff" src="Images/t-shirt4.png">
+                    <h1>$35</h1>
+                </li>
+                <li>
+                    <img alt="stuff" src="Images/t-shirt5.png">
+                    <h1>$35</h1>
+                </li>
+                <li>
+                    <img alt="stuff" src="Images/t-shirt6.png">
+                    <h1>$35</h1>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+</body>
+            <!--
+              <img src="Images/t-shirt2.png" >
+          <h1>$35</h1>
+              <img src ="Images/t-shirt3.png">
+          <h1>$35</h1>
+              <img src ="Images/t-shirt4.png">
+          <h1>$35</h1>
+              <img src ="Images/t-shirt5.png">
+          <h1>$35</h1>
+              <img src ="Images/t-shirt6.png">
+          <h1>$35</h1>
+-->
+
+

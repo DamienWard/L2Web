@@ -22,6 +22,7 @@ body {
 
 .nav {
     background-color: lightyellow;
+    position: fixed;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -29,9 +30,9 @@ body {
     align-items: center;
     width: 12%;
     margin: 1%;
-    height: 90vh;
+    height: 96vh;
     font-family: fonty;
-    font-size: 1vw;
+    font-size: 2vw;
 
 }
 
@@ -59,7 +60,7 @@ body {
 }
 
 .left, .right, .bottom {
-    min-height: 200px;
+    min-height: 96;
     background-color: darkgray;
 }
 
@@ -76,15 +77,14 @@ body {
 
 .bottom {
     width: 100%;
-    background-color: whitesmoke;
-
+    background-color: gray;
 }
 
 section {
     display: flex;
     flex-wrap: wrap;
     width: 83%;
-    margin: 1% 2% 1% 1%;
+    margin: 1% 2% 1% 16%;
 }
 body img {
     width: 25%;
@@ -104,4 +104,81 @@ body img {
 h1 {
     font-family: fonty;
     text-align: center;
+}
+
+.right img {
+   margin-left: 5%; 
+   margin-bottom: 4%;
+    
+}
+
+.bottom img {
+   margin-left: 3%; 
+   margin-bottom: 1%
+}
+.right img:hover {
+    background-color: gainsboro;
+}
+
+.bottom img:hover {
+    background-color: gray;
+}
+
+h3 {
+     font-family: fonty;
+    text-align: left;
+    font-size: 7vh;
+    color: black
+}
+
+h4 {
+     font-family: fonty;
+    text-align: left;
+    font-size: 20vh;
+}
+
+
+
+.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.products li {
+    width: 45%;
+    margin: 2vh 2%;
+}
+
+.products li img {
+    width: 60%;
+}
+
+
+h5 {
+    font-size: 3vh;
+    text-align: center;
+    font-family: fonty;
+}
+
+h6 {
+   font-size: 3vh;
+    text-align: left;
+    font-family: fonty; 
+}
+
+.seven {
+   font-size: 7vh;
+    text-align: left;
+    font-family: fonty; 
+}
+
+.nav .bgLess {
+    background-color: lightYellow;
+    border: none;
+    
+}
+
+.nav .bgLess:hover {
+    background-color: lightyellow;
 }
